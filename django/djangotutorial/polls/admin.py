@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from import_export import resources
 from .models import Choice, Question
 
 class ChoiceInline(admin.TabularInline):
@@ -21,5 +21,7 @@ class QuestionAdmin(admin.ModelAdmin):
              'all': ('templates/admin/base_site.css',)
         }
 
-
+# class QuestionResource(resources.ModelResource):
+#     class Meta:
+#         model = Question
 admin.site.register(Question, QuestionAdmin)
