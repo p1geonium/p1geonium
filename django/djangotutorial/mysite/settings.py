@@ -10,10 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-import logging
 from pathlib import Path
 import os
-from import_export.formats.base_formats import XLSX, CSV, XLS
+# from import_export.formats.base_formats import XLSX, CSV, XLS
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -133,6 +132,6 @@ MEDIA_URL='/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-IMPORT_EXPORT_USE_TRANSACTIONS = True
-IMPORT_EXPORT_SKIP_ADMIN_LOG = False
-IMPORT_EXPORT_FORMATS = [XLSX, CSV, XLS]
+# IMPORT_EXPORT_USE_TRANSACTIONS = True
+# IMPORT_EXPORT_SKIP_ADMIN_LOG = False
+# IMPORT_EXPORT_FORMATS = [XLSX, CSV, XLS]
