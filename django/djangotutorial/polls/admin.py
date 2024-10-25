@@ -1,6 +1,10 @@
 from django.contrib import admin
 from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 from .models import Choice, Question
+
+admin.site.site_header = "Poll Management Admin Portal"
+# admin.site.index_title = "Welcome to the FEEL GOOD FRIDAY!"
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -22,6 +26,9 @@ class QuestionAdmin(admin.ModelAdmin):
         }
 
 # class QuestionResource(resources.ModelResource):
+#     def for_delete(self, row, instance):
+#         return row["delete"] == "1"
+    
 #     class Meta:
 #         model = Question
 admin.site.register(Question, QuestionAdmin)
